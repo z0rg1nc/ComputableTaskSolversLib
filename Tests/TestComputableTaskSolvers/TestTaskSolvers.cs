@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using BtmI2p.MiscUtils;
 using BtmI2p.ComputableTaskInterfaces.Client;
+using BtmI2p.MiscUtils;
 using BtmI2p.TaskSolvers.Scrypt;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace TestClientExternalCommunication
+namespace BtmI2p.ComputableTaskSolvers.Tests
 {
     public class TestTaskSolvers
     {
@@ -21,7 +21,7 @@ namespace TestClientExternalCommunication
         }
 
         [Fact]
-        public async Task Test1()
+        public void TestBase64DescriptionAndSolution()
         {
             var taskB64 ="ew0KICAiQ29tbW9uSW5mbyI6IHsNCiAgICAiVGFza0d1aWQiOiAiNjM3MDQ4MjMtY2E3NS00MGU5LTkyMTgtMDAzYmJiZTY1NzIyIiwNCiAgICAiVmFsaWRVbnRpbCI6ICIyMDE1LTA3LTEwVDExOjQ3OjE2IiwNCiAgICAiVGFza1R5cGUiOiAwLA0KICAgICJCYWxhbmNlR2FpbiI6IDENCiAgfSwNCiAgIlRhc2tEZXNjcmlwdGlvbiI6IHsNCiAgICAiUGFzc1NhbHRTaXplIjogMzIsDQogICAgIk4iOiAxNjM4NCwNCiAgICAiUiI6IDgsDQogICAgIlAiOiAxLA0KICAgICJEa0xlbiI6IDIsDQogICAgIlNhbHQiOiAiVlNmbEg0T2VmTlZkRllHWTl0NXdqTGZwSnlNbTdKK0szTFo1SkVDYldidz0iLA0KICAgICJTb2x1dGlvbk1hc2siOiAiLzhBPSIsDQogICAgIlNvbHV0aW9uRXF1YWwiOiAibklNPSINCiAgfQ0KfQ==";
             var solutionB64 = "ew0KICAiQ29tbW9uSW5mbyI6IHsNCiAgICAiVGFza0d1aWQiOiAiNjM3MDQ4MjMtY2E3NS00MGU5LTkyMTgtMDAzYmJiZTY1NzIyIiwNCiAgICAiVmFsaWRVbnRpbCI6ICIyMDE1LTA3LTEwVDExOjQ3OjE2LjM0MTk0NTRaIiwNCiAgICAiVGFza1R5cGUiOiAwLA0KICAgICJCYWxhbmNlR2FpbiI6IDENCiAgfSwNCiAgIlRhc2tTb2x1dGlvbiI6IHsNCiAgICAiU29sdXRpb25QYXNzIjogIkRsMmJOSy9obGxOeDVyamNhOS9lcDBaNzZ2Rk53N0Izd0hGN2w5azNTMlE9Ig0KICB9DQp9";
